@@ -17,7 +17,7 @@ const TransactionList = () => {
       <h2 className={`${montserrat.className} mb-4 text-4xl font-bold antialiased tracking-tight`}>Movements</h2>
 
 
-      <ScrollArea id="list" className='flex flex-col gap-1 max-h-[38.5rem] rounded-md sm:pr-4 w-fit'>
+      <ScrollArea id="list" className='flex flex-col gap-1 max-h-[38.5rem] rounded-md w-auto sm:pr-4 '>
         {transactions.length === 0 ?
           <div className='w-fit items-center flex gap-2 justify-center text-yellow-700 dark:text-yellow-400'>
             <IoIosWarning className="text-xl " />
@@ -25,7 +25,7 @@ const TransactionList = () => {
           </div>
           :
           transactions && transactions.map(transaction => (
-            <li className='text-xs my-1 max-w-lg flex justify-between sm:text-sm font-medium text-muted-foreground border border-zinc-300 dark:border-zinc-800  drop-shadow-sm bg-zinc-50 dark:bg-zinc-900 items-center px-2 rounded-lg' key={transaction.id}>
+            <li className='text-xs my-1 max-w-lg flex md:max-w-96 justify-between sm:text-sm font-medium text-muted-foreground border border-zinc-300 dark:border-zinc-800  drop-shadow-sm bg-zinc-50 dark:bg-zinc-900 items-center px-2 rounded-lg' key={transaction.id}>
               <p className='mr-4 max-w-96'>{transaction.desc}</p>
               <div className='flex items-center'>
                 <span className={`${transaction.amount < 0 ? 'text-red-500' : 'text-green-500'}`}>${Math.abs(transaction.amount)}</span>
