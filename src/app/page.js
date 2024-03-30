@@ -6,10 +6,11 @@ import TransactionForm from "@/components/transactions/TransactionForm";
 import TransactionList from "@/components/transactions/TransactionList";
 import Charts from "@/components/Charts";
 import { FaCircle } from "react-icons/fa";
+import Link from "next/link";
 export default function Home() {
   return (
     <GlobalProvider>
-      <main className="flex justify-center flex-col md:flex-row gap-4 m-2 p-4 bg-white dark:bg-zinc-950 ">
+      <main className="flex flex-col md:flex-row gap-4 mx-2 mt-2 pt-1 bg-white dark:bg-zinc-950 ">
         <section className="w-full md:w-1/3">
           <div className="flex">
             <ToggleMode />
@@ -23,10 +24,18 @@ export default function Home() {
         <section className="w-full md:w-1/3 flex flex-col justify-between h-[42rem]">
           <TransactionList />
         </section>
-        <section className="w-full md:w-1/3 bg-zinc-100 dark:bg-zinc-900  p-2 rounded-xl flex">
+        <section className="w-full md:w-1/3 bg-zinc-100 dark:bg-zinc-900 p-2 rounded-xl flex">
           <Charts />
         </section>
       </main>
+      <footer className="flex justify-center items-center h-12 bg-white dark:bg-zinc-950">
+        <span className="text-xs text-muted-foreground">
+          <Link href={'https://sz-dev-portfolio.vercel.app/'} target='_blank' className="font-semibold hover:text-black dark:hover:text-white duration-200">
+            @solanodz
+          </Link>
+          {' '}| 2024
+        </span>
+      </footer>
 
     </GlobalProvider>
   );

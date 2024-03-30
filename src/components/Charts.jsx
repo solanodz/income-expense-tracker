@@ -45,7 +45,7 @@ const Charts = () => {
                     ]}
                     innerRadius={100}
                     labelComponent={<VictoryLabel textAnchor="middle" dy={-10} />}
-                    labelRadius={120}
+                    labelRadius={70}
                     labels={({ datum }) => `${datum.y}%`}
                     radius={140}
                     animate={{
@@ -54,7 +54,7 @@ const Charts = () => {
                     }}
 
                     scale={{ x: "Expenses", y: "Incomes" }}
-                    style={{ labels: { fill: "white", fontSize: 12, fontWeight: "bold" } }}
+                    style={{ labels: { fill: "gray", fontSize: 12, fontWeight: "bold" } }}
                     colorScale={["#ef4444", "#22c55e"]}
                 />
             }

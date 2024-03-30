@@ -43,7 +43,7 @@ const TransactionForm = () => {
     return (
         <div>
             <h2 className='text-lg font-medium tracking-tight mt-12'>Transaction Form</h2>
-            <span className=' flex gap-1 items-center text-muted-foreground italic text-xs mb-4'>Select the type of movement before ading the transaction</span>
+            <span className=' flex gap-1 text-muted-foreground italic text-xs mb-4'>Select the type of movement before adding the transaction.</span>
             <Tabs defaultValue="income" className="">
                 <TabsList className='flex mx-auto w-fit'>
                     <TabsTrigger value="income" className='px-8 w-fit'>Income</TabsTrigger>

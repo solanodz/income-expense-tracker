@@ -27,20 +27,20 @@ const Balance = () => {
 
 
     return (
-        <div className={`${montserrat.className} text-4xl font-bold max-w-lg p-2 px-4 flex flex-col justify-between gap-2`}>
+        <div className={`${montserrat.className} bg-zinc-100 pb-4 rounded-lg dark:bg-zinc-900 max-w-lg p-2 px-4 flex flex-col justify-between gap-2`}>
             <div className="flex justify-around items-center font-semibold my-4 max-w-lg">
                 <div className=''>
                     <span className='text-sm text-muted-foreground font-medium'>Incomes</span>
-                    <p className="text-green-500 text-2xl">$ {' '}{showAmount ? JSON.stringify(income, null, 2) : '****'}</p>
+                    <p className="text-green-500 text-lg md:text-2xl">$ {' '}{showAmount ? JSON.stringify(income, null, 2) : '****'}</p>
                 </div >
                 <Separator orientation="vertical" className='h-16 my-auto' />
                 <div className=''>
                     <span className='text-sm text-muted-foreground font-medium'>Expenses</span>
-                    <p className="text-red-500 text-2xl">$ {' '}{showAmount ? JSON.stringify(expense, null, 2) : '****'}</p>
+                    <p className="text-red-500 text-lg md:text-2xl">$ {' '}{showAmount ? JSON.stringify(expense, null, 2) : '****'}</p>
                 </div>
             </div>
             <div className='flex justify-between'>
-                <span className='mr-6'>
+                <span className='mr-6 text-3xl md:text-4xl font-bold'>
                     ${' '}{showAmount ? JSON.stringify(total, null, 2) : '****'}
                 </span>
                 <Button className='text-lg' variant='link' onClick={() => setShowAmount(!showAmount)}>
