@@ -24,7 +24,7 @@ export default function Home() {
         <section className="w-full md:w-1/3 flex flex-col justify-between h-[42rem]">
           <TransactionList />
         </section>
-        <section className="w-full md:w-1/3 bg-zinc-100 dark:bg-zinc-900 p-2 rounded-xl flex">
+        <section className="md:w-1/3 bg-zinc-100 dark:bg-zinc-900 p-2 rounded-xl flex justify-center w-fit">
           <Charts />
         </section>
       </main>
