@@ -30,7 +30,7 @@ export default function Home() {
       </main>
       <footer className="flex justify-center items-center h-12 bg-white dark:bg-zinc-950">
         <span className="text-xs text-muted-foreground">
-          <Link href={'https://sz-dev-portfolio.vercel.app/'} target='_blank' className="font-semibold hover:text-black dark:hover:text-white duration-200">
+          <Link href={'https://solanodz.vercel.app/'} target='_blank' className="font-semibold hover:text-black dark:hover:text-white duration-200">
             @solanodz
           </Link>
           {' '}| 2024
